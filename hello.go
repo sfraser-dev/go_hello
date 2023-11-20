@@ -1,0 +1,54 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// variables
+	var myName string = "Joe Bloggs"
+	const PI float32 = 3.14159265358
+	var a, b, c = "mars", 42, true
+	d := 21
+	// truthy falsey
+	var (
+		nada1 int
+		nada2 string
+		nada3 float32
+		nada4 bool
+	)
+	e, f := "oops", false
+
+	// emmet "fmp" "fmpl"
+	fmt.Println("Hi", myName)
+	fmt.Print("Hi ", myName, "\n")
+	fmt.Println("pi = ", PI)
+	fmt.Println(a, b, c, d)
+	fmt.Println(nada1, nada2, nada3, nada4)
+	fmt.Println(e, f)
+	// printf formatting verbs (type and value)
+	fmt.Printf("b is of type %T and has value %v\n", b, b)
+	fmt.Printf("%d\n", d)       // %d ints
+	fmt.Printf("%+d\n", d)      // always show sign
+	fmt.Printf("%4dOops\n", d)  // right justified by 4
+	fmt.Printf("%-4dOops\n", d) // left justified by 4
+	fmt.Printf("%s\n", a)       // %s string
+	fmt.Printf("%q\n", a)       // double Quoted string
+	fmt.Printf("%8s\n", a)      // right justified
+	fmt.Printf("%-8s\n", a)     // left justified
+	fmt.Printf("%f\n", PI)      // %f floats
+	fmt.Printf("%.2f\n", PI)    // precision 2
+	fmt.Printf("%4.2f\n", PI)   // precision 2 width 4
+
+	// if statement
+	if b > d {
+		fmt.Println("b is greater than d")
+	} else if b == d {
+		fmt.Println("b == d")
+	} else {
+		fmt.Println("d greater than b")
+	}
+
+	// array
+	// var cars = [4]string{"bmw", "ford", "peugeot", "ferrari"}
+}
