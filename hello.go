@@ -50,5 +50,35 @@ func main() {
 	}
 
 	// array
-	// var cars = [4]string{"bmw", "ford", "peugeot", "ferrari"}
+	var nos = [4]uint{101, 201, 301, 401}
+	var drinks = [4]string{"coke", "pepsi", "sprite", "fanta"}
+	var cars = [...]string{"bmw", "ford", "peugeot", "ferrari"}
+	flts := [...]float32{1.1, 2.2, 3.3, 4}
+	fmt.Println(nos)
+	fmt.Println(drinks)
+	fmt.Println("cars[0] = ", cars[0])
+	fmt.Println(flts)
+	fmt.Println("len of array cars is:", len(cars))
+
+	// empty slice (dynamic)
+	sl1 := []int{}
+	fmt.Println("slice len is", len(sl1))
+	fmt.Println("slice cap is", cap(sl1))
+	fmt.Println(sl1)
+	// non-empty slice (dynamic)
+	sl2 := []string{"Go", "Slices", "Are", "Powerful"}
+	fmt.Println("slice len is", len(sl2))
+	fmt.Println("slice cap is", cap(sl2))
+	fmt.Println(sl2)
+	sl2 = append(sl2, "Growwwwing")
+	fmt.Println("slice len is", len(sl2))
+	fmt.Println("slice cap is", cap(sl2))
+	fmt.Println(sl2)
+	// create slice from array
+	testArr := [3]int{1000, 1001, 1002}
+	testSlice := testArr[0:2]
+	fmt.Println("len testSlice", len(testSlice))
+	fmt.Println("cap testSlice", cap(testSlice))
+	fmt.Println(testSlice)
+	fmt.Printf("testSlice: %v\n", testSlice)
 }
