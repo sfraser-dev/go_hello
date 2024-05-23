@@ -19,7 +19,7 @@ func main() {
 	)
 	e, f := "oops", false
 
-	// emmet "fmp" "fmpl"
+	// snippet "fmp" "fmpl"
 	fmt.Println("Hi", myName)
 	fmt.Print("Hi ", myName, "\n")
 	fmt.Println("pi = ", PI)
@@ -34,8 +34,8 @@ func main() {
 	fmt.Printf("%-4dOops\n", d) // left justified by 4
 	fmt.Printf("%s\n", a)       // %s string
 	fmt.Printf("%q\n", a)       // double Quoted string
-	fmt.Printf("%8s\n", a)      // right justified
-	fmt.Printf("%-8s\n", a)     // left justified
+	fmt.Printf("%8sOops\n", a)  // right justified
+	fmt.Printf("%-8sOops\n", a) // left justified
 	fmt.Printf("%f\n", PI)      // %f floats
 	fmt.Printf("%.2f\n", PI)    // precision 2
 	fmt.Printf("%4.2f\n", PI)   // precision 2 width 4
@@ -63,6 +63,9 @@ func main() {
 	// empty slice (dynamic)
 	sl1 := []int{}
 	fmt.Println("slice len is", len(sl1))
+	/* capacity of underlying array in the slice
+	   if more underlying array elements needed, Go will copy
+	   to a new underlying array with (usually) twice the capacity */
 	fmt.Println("slice cap is", cap(sl1))
 	fmt.Println(sl1)
 	// non-empty slice (dynamic)
