@@ -28,18 +28,21 @@ func main() {
 	fmt.Println(e, f)
 	// printf formatting verbs (type and value)
 	fmt.Printf("b is of type %T and has value %v\n", b, b)
-	fmt.Printf("%d\n", d)                                                            // %d ints
-	fmt.Printf("%+d\n", d)                                                           // always show sign
-	fmt.Printf("%4dOops\n", d)                                                       // right justified by 4
-	fmt.Printf("%-4dOops\n", d)                                                      // left justified by 4
-	fmt.Printf("%s\n", a)                                                            // %s string
-	fmt.Printf("%q\n", a)                                                            // double Quoted string
-	fmt.Printf("%8sOops\n", a)                                                       // right justified
-	fmt.Printf("%-8sOops\n", a)                                                      // left justified
-	fmt.Printf("%f\n", PI)                                                           // %f floats
-	fmt.Printf("%.2f\n", PI)                                                         // precision 2
-	fmt.Printf("%4.2f\n", PI)                                                        // precision 2 width 4
-	fmt.Printf("int is: %v, string is: %v, float is %v\n", 100, "hello, world!", 3.14) // value formatting
+	fmt.Printf("%d\n", d)       // %d ints
+	fmt.Printf("%+d\n", d)      // always show sign
+	fmt.Printf("%4dOops\n", d)  // right justified by 4
+	fmt.Printf("%-4dOops\n", d) // left justified by 4
+	fmt.Printf("%s\n", a)       // %s string
+	fmt.Printf("%q\n", a)       // double Quoted string
+	fmt.Printf("%8sOops\n", a)  // right justified
+	fmt.Printf("%-8sOops\n", a) // left justified
+	fmt.Printf("%f\n", PI)      // %f floats
+	fmt.Printf("%.2f\n", PI)    // precision 2
+	fmt.Printf("%4.2f\n", PI)   // precision 2 width 4
+
+	// value formatting (prints out anything, even arrays and slices)
+	var myArr = [5]int{1000, 1001, 1002, 1003, 1004}
+	fmt.Printf("int is: %v, string is: %v, float is %v, array is %v\n", 100, "hello, world!", 3.14, myArr)
 
 	// if statement
 	if b > d {
