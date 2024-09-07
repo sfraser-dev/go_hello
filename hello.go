@@ -56,6 +56,7 @@ func main() {
 	var nos = [4]uint{101, 201, 301, 401}
 	var drinks = [4]string{"coke", "pepsi", "sprite", "fanta"}
 	// size of array will be auto determined based on number of elements provided during initialization
+	// ellipses needed or it would be a slice
 	var cars = [...]string{"bmw", "ford", "peugeot", "ferrari"}
 	flts := [...]float32{1.1, 2.2, 3.3, 4}
 	fmt.Println(nos)								// [101 201 301 401]	

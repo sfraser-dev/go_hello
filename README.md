@@ -1,3 +1,3 @@
 # Go programming
 
-Trying it out.
+Playground for testing Go.
